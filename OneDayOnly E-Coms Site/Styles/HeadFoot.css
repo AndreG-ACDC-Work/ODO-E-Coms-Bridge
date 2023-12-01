@@ -14,19 +14,19 @@
     align-content: space-between;
 }
 
-.Logo {
+.LogoCont {
     display: flex;
     flex-basis: 22%;
     min-width: 22%;
     height: 4rem;
     align-self: center;
+    justify-content: space-between;
+    background-image: linear-gradient(135deg, #fff 45%, #0083c4 55%);
 }
 
-.Logo img {
+.LogoCont img {
     height: 4rem;
     width: auto;
-    margin-left: 0.8rem;
-
 }
 
 .Menu {
@@ -53,7 +53,7 @@
     border-left-color: #000;
     height: 100%;
     align-self: stretch;
-    writing-mode: vertical-lr;
+    /* writing-mode: vertical-lr; */
 }
 
 .VertEtchLeftNav {
@@ -62,7 +62,7 @@
     flex-basis: 100%;
     min-width: 1.5rem;
     align-self: center;
-    writing-mode: vertical-lr;
+    /* writing-mode: vertical-lr; */
 }
 
 .VertEtchRightNav {
@@ -71,13 +71,13 @@
     flex-basis: 100%;
     min-width: 1.5rem;
     align-self: center;
-    writing-mode: vertical-lr;
+    /* writing-mode: vertical-lr; */
 }
 
 .EtchVertPairNav {
     display: flex;
     flex-basis: 3rem;
     min-height: 3rem;
-    border-left: 1px solid #000;
-    border-right: 1px solid #000;
+    /* border-left: 1px solid #fff;
+    border-right: 1px solid #fff; */
 }
