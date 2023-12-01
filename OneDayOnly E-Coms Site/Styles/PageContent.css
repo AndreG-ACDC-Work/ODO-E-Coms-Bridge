@@ -1,0 +1,19 @@
+* {
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+html {
+    font-size: 11pt;
+}
+
+body {
+    margin: 0;
+    background-color: #f0eeee;
+}
+
+.MainContentContainer {
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: aqua;
+    display: flex;
+}

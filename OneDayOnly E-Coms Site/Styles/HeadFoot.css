@@ -1,0 +1,83 @@
+
+
+
+
+/*---------------*/
+/*------Nav------*/
+/*---------------*/
+
+.NavContainer {
+    display: flex;
+    height: 4rem;
+    justify-content: space-between;
+    align-items: center;
+    align-content: space-between;
+}
+
+.Logo {
+    display: flex;
+    flex-basis: 22%;
+    min-width: 22%;
+    height: 4rem;
+    align-self: center;
+}
+
+.Logo img {
+    height: 4rem;
+    width: auto;
+    margin-left: 0.8rem;
+
+}
+
+.Menu {
+    flex-basis: 22%;
+    min-width: 22%;
+    height: 4rem;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0;
+}
+
+.Menu li {
+    margin-left: 0.8rem;
+    margin-right: 0.8rem;
+    width: max-content;
+
+}
+
+.NavCent {
+    flex-basis: 50%;
+    border-right-color: #000;
+    border-left-color: #000;
+    height: 100%;
+    align-self: stretch;
+    writing-mode: vertical-lr;
+}
+
+.VertEtchLeftNav {
+    height: 4rem;
+    width: 1.5rem;
+    flex-basis: 100%;
+    min-width: 1.5rem;
+    align-self: center;
+    writing-mode: vertical-lr;
+}
+
+.VertEtchRightNav {
+    height: 4rem;
+    width: 1.5rem;
+    flex-basis: 100%;
+    min-width: 1.5rem;
+    align-self: center;
+    writing-mode: vertical-lr;
+}
+
+.EtchVertPairNav {
+    display: flex;
+    flex-basis: 3rem;
+    min-height: 3rem;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+}
