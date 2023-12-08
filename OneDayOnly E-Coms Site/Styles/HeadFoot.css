@@ -1,87 +1,85 @@
-
-
-
-
-/*---------------*/
-/*------Nav------*/
-/*---------------*/
-
-.NavContainer {
-    display: flex;
-    height: 4rem;
-    justify-content: space-between;
-    align-items: center;
-    align-content: space-between;
+.NavCont {
+    display: grid;
+    /* grid-template-columns: 24vw 1.5vw 49vw 1.5vw 24vw; */
+    grid-template-columns: 24vw 1.5vw 22vw 5vw 22vw 1.5vw 24vw;
+    grid-template-rows: auto auto auto;
 }
 
-.LogoCont {
-    display: flex;
-    flex-basis: 22%;
-    min-width: 22%;
-    height: 4rem;
-    align-self: center;
-    justify-content: space-between;
-    background-image: linear-gradient(135deg, #fff 45%, #0083c4 55%);
-}
-
-.LogoCont img {
-    height: 4rem;
-    width: auto;
-    flex-basis: 33%;
-    overflow: hidden;
+.NavCent {
+    grid-column: 3 / span 3;
 }
 
 .Menu {
-    flex-basis: 22%;
-    min-width: 22%;
-    height: 4rem;
+    height: 7vh;
     display: flex;
+    align-self: stretch;
     list-style: none;
     align-items: center;
     justify-content: flex-end;
-    margin: 0;
+    margin: 0 1vw 0 0;
     padding: 0;
 }
 
 .Menu li {
-    margin-left: 0.8rem;
-    margin-right: 0.8rem;
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
     width: max-content;
 
 }
 
-.NavCent {
-    flex-basis: 50%;
-    border-right-color: #000;
-    border-left-color: #000;
-    height: 100%;
-    align-self: stretch;
+.LogoCont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 7vh;
+    background-image: linear-gradient(135deg, #fff 45%, #0093D0 55%);
+    overflow: hidden;
 }
 
-.VertEtchNav {
-    height: 4rem;
-    width: 1.2rem;
-    flex-basis: 100%;
-    min-width: 1.2rem;
-    align-self: center;
-    border-left: 1px solid #000;
-    border-right: 1px solid #000;
+.LogoCont img {
+    height: 6.5vh;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
+.LogoCont img:nth-child(1) {
+    margin-right: auto;
+}
+
+.LogoCont img:nth-child(2) {
+    margin-left: auto;
+}
 
 .EtchVertPairNav {
     display: flex;
-    flex-basis: 2.4rem;
-    min-height: 2.4rem;
+    justify-content: center;
+    align-items: stretch;
 }
 
-.HorzPageEndsNav {
-    flex-basis: 22%;
-    min-width: 22%;
+.EtchLR{
+    flex-basis: 50%;
+    flex-grow: 1;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    width: 1vw;
 }
 
-.EtchCenterNav {
-    flex-basis: 5%;
-    height: 100%;
-    align-self: stretch;
+.EtchTB{
+    flex-basis: 50%;
+    flex-grow: 1;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    height: 1.5vh;
+}
+
+.NavSectDivide {
+    display: grid;
+    grid-template-columns: 24vw 1.5vw 22vw 5vw 22vw 1.5vw 24vw;
+}
+
+.EtchHorzPairNav {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-flow: column;
 }
