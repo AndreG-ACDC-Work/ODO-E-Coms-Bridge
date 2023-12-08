@@ -1,12 +1,12 @@
 .NavCont {
     display: grid;
     /* grid-template-columns: 24vw 1.5vw 49vw 1.5vw 24vw; */
-    grid-template-columns: 24vw 1.5vw 22vw 5vw 22vw 1.5vw 24vw;
+    grid-template-columns: 24vw 0.75vw 0.75vw 20.5vw 0.75vw 0.75vw 5vw 0.75vw 0.75vw 20.5vw 0.75vw 0.75vw 24vw;
     grid-template-rows: auto auto auto;
 }
 
 .NavCent {
-    grid-column: 3 / span 3;
+    grid-column: 4 / span 7;
 }
 
 .Menu {
@@ -54,6 +54,7 @@
     display: flex;
     justify-content: center;
     align-items: stretch;
+    grid-column: span 2;
 }
 
 .EtchLR{
@@ -61,7 +62,23 @@
     flex-grow: 1;
     border-left: 1px solid #000;
     border-right: 1px solid #000;
-    width: 1vw;
+    width: 0.75vw;
+}
+
+.EtchTR{
+    flex-basis: 50%;
+    flex-grow: 1;
+    border-top: 1px solid #000;
+    border-right: 1px solid #000;
+    height: 0.75vh;
+}
+
+.EtchTL{
+    flex-basis: 50%;
+    flex-grow: 1;
+    border-top: 1px solid #000;
+    border-left: 1px solid #000;
+    height: 0.75vh;
 }
 
 .EtchTB{
@@ -69,12 +86,7 @@
     flex-grow: 1;
     border-top: 1px solid #000;
     border-bottom: 1px solid #000;
-    height: 1.5vh;
-}
-
-.NavSectDivide {
-    display: grid;
-    grid-template-columns: 24vw 1.5vw 22vw 5vw 22vw 1.5vw 24vw;
+    height: 0.75vh;
 }
 
 .EtchHorzPairNav {
@@ -82,4 +94,12 @@
     justify-content: center;
     align-items: stretch;
     flex-flow: column;
+    min-height: 1.5vw;
+}
+
+.EtchMidPairNav {
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+    width: 22vw;
 }
