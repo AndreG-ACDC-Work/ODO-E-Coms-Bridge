@@ -1,6 +1,6 @@
 .NavCont {
     display: grid;
-    grid-template-columns: 20vw 0.4vw 0.4vw 26.9vw 0.4vw 0.4vw 3vw 0.4vw 0.4vw 26.9vw 0.4vw 0.4vw 20vw;
+    grid-template-columns: 15vw 0.4vw 0.4vw 31.9vw 0.4vw 0.4vw 3vw 0.4vw 0.4vw 31.9vw 0.4vw 0.4vw 15vw;
     grid-template-rows: auto auto auto;
 }
 
@@ -20,8 +20,8 @@
 }
 
 .Menu li {
-    margin-left: 0.7rem;
-    margin-right: 0.7rem;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
     width: max-content;
 
 }
