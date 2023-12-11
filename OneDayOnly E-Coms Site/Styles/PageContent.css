@@ -4,7 +4,7 @@
 }
 
 html {
-    font-size: 5pt;
+    font-size: 11pt;
 }
 
 body {
@@ -12,11 +12,24 @@ body {
     background-color: #f0eeee;
 }
 
-.MainContentContainer {
-    margin-left: 10%;
-    margin-right: 10%;
-    background-color: aqua;
-    display: flex;
+.MainContHF {
+    display: grid;
+    margin-left: 8vw;
+    margin-right: 8vw;
+    grid-template-columns: 0.4vw 0.4vw 9.6vw 0.4vw 0.4vw 0.8vw 0.4vw 0.4vw 26.9vw 0.4vw 0.4vw 3vw 0.4vw 0.4vw 26.9vw 0.4vw 0.4vw 0.8vw 0.4vw 0.4vw 9.6vw 0.4vw 0.4vw;
+    grid-template-rows: auto auto auto;
+}
+
+.MainCont {
+    display: grid;
+    margin-left: 8vw;
+    margin-right: 8vw;
+    grid-template-columns: 0.4vw 0.4vw 9.6vw 0.4vw 0.4vw 0.8vw 60vw 0.8vw 0.4vw 0.4vw 9.6vw 0.4vw 0.4vw;
+    grid-template-rows: auto auto auto;
+}
+
+.CentCont {
+    grid-column: 6 / span 3;
 }
 
 .JustLeft {
