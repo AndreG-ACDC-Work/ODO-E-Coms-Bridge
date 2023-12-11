@@ -11,19 +11,33 @@
 .Menu {
     height: 5vh;
     display: flex;
-    align-self: stretch;
+    /* align-self: stretch; */
     list-style: none;
     align-items: center;
-    justify-content: flex-end;
-    margin: 0 1vw 0 0;
+    justify-content: center;
+    text-align: center;
+    margin: 0 1vw 0 ;
     padding: 0;
 }
 
-.Menu li {
-    margin-left: 0.3rem;
-    margin-right: 0.3rem;
-    width: max-content;
+.LogMenuCont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.Menu li {
+    display: inherit;
+    justify-content: center;
+    margin-left: 0.4vw;
+    margin-right: 0.4vw;
+    width: 6vw;
+    height: 3vh;
+    border: 1px solid #000;
+}
+
+.Menu a {
+    align-self: center;
 }
 
 .LogoCont {
@@ -36,7 +50,7 @@
 }
 
 .LogoCont img {
-    height: 4.5vh;
+    height: 5vh;
     margin-top: auto;
     margin-bottom: auto;
 }
