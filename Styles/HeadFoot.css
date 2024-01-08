@@ -8,11 +8,18 @@
 @media (max-width: 1500px) {
     :root {
         --PageGrid: 5vw repeat(6, 15vw) 5vw;
-        --NavGrad: linear-gradient(90deg, #fff 14.5%, #0093D0 22.5%, #0079C1 29.5%, #2E3573 100%);
+        --NavGrad: linear-gradient(90deg, #fff 14.5%, #0093D0 22.5%, #0079C1 39.5%, #2E3573 100%);
     }
 }
 
-@media (max-width: 1238px) {
+@media (max-width: 1280px) {
+    :root {
+        --PageGrid: 3vw 3vw repeat(4, 22vw) 3vw 3vw;
+        --NavGrad: linear-gradient(90deg, #fff 17.5%, #0093D0 25.5%, #0079C1 38.5%, #2E3573 100%);
+    }
+}
+
+@media (max-width: 768px) {
     :root {
         --PageGrid: repeat(4, 25vw);
         --NavGrad: linear-gradient(90deg, #fff 19.5%, #0093D0 27.5%, #0079C1 32.5%, #2E3573 100%);
@@ -27,7 +34,7 @@
     align-items: center;
 }
 
-.NavCont a:nth-child(1){
+.NavCont a:first-child{
     grid-column: 2;
 }
 
@@ -42,6 +49,21 @@
     height: 5.5vh;
     width: auto;
 }
+
+@media (max-width: 1280px) {
+    .NavCont a:nth-child(1){
+        grid-column: 3;
+        margin-left: 0;
+    }
+
+    .ExtLogo {
+        margin: auto 0 auto -5vh;
+        height: 5.5vh;
+        width: auto;
+    }
+
+}
+
 
 .UserMenu {
     height: 3vh;
@@ -92,6 +114,13 @@
 
 .UserMenu {
     color:#fff;
+}
+
+@media (max-width: 1280px) {
+    .UserMenu {
+        grid-column: 6;
+    }
+
 }
 
 /* .LogoCont {
@@ -156,7 +185,7 @@
     font-weight: bold;
 }
 
-@media (max-width: 1238px) {
+@media (max-width: 768px) {
     .HeadMenu {
         grid-column: 1 / span 4;
     }
@@ -202,7 +231,7 @@
     grid-column: 3;
 }
 
-@media (max-width: 1238px) {
+@media (max-width: 768px) {
     .FootDetsCol {
         display: flex;
         flex-direction: column;
@@ -253,7 +282,7 @@
     display: block;
     position: relative;
     height: 0.30vh;
-    width: 20vh;
+    width: 19.5vh;
     background: var(--HeadingGrad);
     
 }
