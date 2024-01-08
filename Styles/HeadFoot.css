@@ -1,43 +1,77 @@
+:root {
+    --NavGrad: linear-gradient(90deg, #fff 18.5%, #0093D0 26.5%, #0079C1 29.5%, #2E3573 100%);
+    --HeadingGrad: linear-gradient(90deg, #2E3573 0%, #0079C1 76.5%, #0093D0 79.5%, #fff 100%);
+    --HNFGrad: linear-gradient(90deg, #2E3573 0%, #0079C1 90%, #0093D0 100%);
+    --PageGrid: 11vw repeat(6, 13vw) 11vw;
+}
+
+@media (max-width: 1500px) {
+    :root {
+        --PageGrid: 5vw repeat(6, 15vw) 5vw;
+        --NavGrad: linear-gradient(90deg, #fff 14.5%, #0093D0 22.5%, #0079C1 29.5%, #2E3573 100%);
+    }
+}
+
+@media (max-width: 1238px) {
+    :root {
+        --PageGrid: repeat(4, 25vw);
+        --NavGrad: linear-gradient(90deg, #fff 19.5%, #0093D0 27.5%, #0079C1 32.5%, #2E3573 100%);
+    }
+}
+
 .NavCont {
     display: grid;
-    grid-template-columns: 5vw 7.5vw 7.5vw 7.5vw 22.5vw 22.5vw 7.5vw 7.5vw 7.5vw 5vw ;
+    grid-template-columns: var(--PageGrid);
     grid-template-rows: auto auto auto;
-    background-image: linear-gradient(90deg, #fff 11.5%, #0093D0 13.5%, #0079C1 15.5%, #2E3573 70%);
+    background: var(--NavGrad);
     align-items: center;
 }
 
-.NavCent {
-    grid-column: 4 / span 2;
+.NavCont a:nth-child(1){
+    grid-column: 2;
+}
+
+.ACDCLogo {
+    margin: auto 0;
+    height: 5.5vh;
+    width: auto;
+}
+
+.ExtLogo {
+    margin: auto 0;
+    height: 5.5vh;
+    width: auto;
 }
 
 .UserMenu {
-    height: 5vh;
+    height: 3vh;
+    justify-self: end;
     display: flex;
     list-style: none;
     align-items: center;
     justify-content: flex-end;
-    margin: 0 1vw 0 ;
+    margin: 0;
     padding: 0;
-    grid-column: 8 / span 2;
+    grid-column: 7;
 }
 
 .UserMenu li {
     display: inherit;
     justify-content: center;
     align-items: center;
-    margin-left: 0.2vw;
-    margin-right: 0.2vw;
-    border: 2px solid #fff;
+    margin-left: 0.4vh;
+    margin-right: 0.4vh;
+    border: 0.3vh solid #fff;
     border-radius: 100%;
-    width: 2.1vw;
-    height: 2.1vw;
+    width: 4vh;
+    height: 4vh;
 }
 
-.UserMenu img {
-    align-self: center;
-    height: 1.15vw;
-    width: auto;
+.UserMenu svg {
+    height: 2.5vh;
+    width: 2.5vh;
     margin: auto;
+    fill: #fff;
 }
 
 .UserMenu li:nth-child(1) {
@@ -52,64 +86,63 @@
     background-color: #0079C1;
 }
 
-.LogoCont {
+.UserMenu svg:nth-child(n+1) {
+    align-self: flex-end;
+}
+
+.UserMenu {
+    color:#fff;
+}
+
+/* .LogoCont {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 7vh;
+    height: 3vh;
     overflow: hidden;
     grid-column: 2 / span 2;
     
-}
+} */
 
-.LogoCont img {
-    height: 5.5vh;
+/* .LogoCont img {
+    height: 2.7vh;
     margin-top: auto;
     margin-bottom: auto;
-}
+} */
 
-.LogoCont img:nth-child(1) {
+/* .LogoCont img:nth-child(1) {
     margin-right: auto;
 }
 
 .LogoCont img:nth-child(2) {
     margin-left: auto;
-}
+} */
 
 .HeadMenu {
     height: 3vh;
+    width: 100vw;
     display: flex;
     list-style: none;
-    justify-content: flex-start;
+    justify-content: center;
     text-align: center;
     margin: 0;
     padding: 0;
-    grid-column: 1 / span 10;
-    background-color: #0079C1;
-    border-top: 2px solid #fff;
-    padding-left: 5.5vw;
+    grid-column: 1 / span 8;
+    background: var(--HNFGrad);
+    border-top: 0.3vh solid #fff;
+
 }
 
 .HeadMenu li {
     display: inherit;
     justify-content: flex-start;
     align-items: center;
-    padding: 2vw auto;
-    /* margin-left: 0.3vw;
-    margin-right: 0.3vw; */
+    padding: 0 auto;
 }
 
-/* .HeadMenu li::before {
-    color: #fff;
-    font-size: 18px;
-    content: "|";
+.HeadMenu li:nth-child(n+2) {
+    margin-left: 1vw;
 }
-
-.HeadMenu li::after {
-    color: #fff;
-    font-size: 18px;
-    content: "|";
-} */
 
 .HeadMenu li:hover {
     background-color: #FDB913;
@@ -118,7 +151,145 @@
 .HeadMenu a {
     text-decoration: none;
     color: #fff;
-    padding-left: 0.2vw;
-    padding-right: 0.2vw;
+    padding-left: 0.2vh;
+    padding-right: 0.2vh;
     font-weight: bold;
 }
+
+@media (max-width: 1238px) {
+    .HeadMenu {
+        grid-column: 1 / span 4;
+    }
+}
+
+.FootCont {
+    display: grid;
+    grid-template-columns: var(--PageGrid) ;
+    grid-template-rows: auto auto auto;
+}
+
+.FootCont::before {
+    content:'';
+    display: block;
+    position: relative;
+    height:2.7vh;
+    grid-column: 1 / span 8;
+    background: var(--HNFGrad);
+}
+
+
+/* .FootBar {
+    display: flex;
+    height: 3vh;
+    place-self: stretch;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1 / span 4;
+    background-color: #0079C1;
+    color:#fff;
+} */
+
+.FootDetsCol {
+    display: flex;
+    flex-direction: column;
+    place-self: start;
+    justify-content: center;
+    align-items: flex-start;
+    width: 15vw;
+}
+
+.FootCont :first-child {
+    grid-column: 3;
+}
+
+@media (max-width: 1238px) {
+    .FootDetsCol {
+        display: flex;
+        flex-direction: column;
+        place-self: start;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 30vw;
+        margin: 0 0 1vw 0;
+    }
+
+    .FootCont::before {
+        content:'';
+        display: block;
+        position: relative;
+        height:2.7vh;
+        grid-column: 1 / span 4;
+        background: var(--HNFGrad);
+    }
+
+    .FootCont div:nth-child(odd) {
+        grid-column: 1 / span 2;
+        justify-self: end;
+        align-self: start;
+        padding: 0 5vw 0 0;
+    }
+
+    .FootCont div:nth-child(even) {
+        grid-column: span 2;
+        justify-self: start;
+        align-self: start;
+        padding: 0 0 0 5vw;
+    }  
+
+    /* .FootDetsCol ul, .FootCont > ul, .FootCont > ul > li {
+        list-style-type: none;
+        margin: 0 !important;
+        padding: 0;
+    } */
+}
+
+.FootDetsCol h4 {
+    font-size: 1.9vh;
+    margin: 1vh 0 0.6vh 0;
+}
+
+.FootDetsCol h4::after {
+    content: '';
+    display: block;
+    position: relative;
+    height: 0.30vh;
+    width: 20vh;
+    background: var(--HeadingGrad);
+    
+}
+
+.FootDetsCol dl {
+    align-self: flex-start;
+    justify-self: flex-start;
+    margin: 0;
+    font-size: 1.5vh;
+}
+
+.FootDetsCol dt {
+    font-weight: bold;
+    margin: 0 0 0.5vh 0.8vh;
+}
+
+.FootDetsCol dd {
+    margin: 0 0 0.5vh 1.6vh;
+}
+
+.FootDetsCol a {
+    text-decoration: none;
+    color:#000;
+    font-size: 1.5vh;
+}
+
+.FootDetsCol ul, .FootCont > ul {
+    margin:unset;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.FootDetsCol li {
+    margin: unset;
+    margin: 0 0 0.50vh 0.8vh;
+    text-align: left;
+}
+

@@ -1,0 +1,140 @@
+.NavCont {
+    display: grid;
+    grid-template-columns: 5vw 7.5vw 7.5vw 7.5vw 22.5vw 22.5vw 7.5vw 7.5vw 7.5vw 5vw ;
+    grid-template-rows: auto auto auto;
+    background-image: linear-gradient(90deg, #fff 11.5%, #0093D0 13.5%, #0079C1 15.5%, #2E3573 70%);
+    align-items: center;
+}
+
+.NavCent {
+    grid-column: 4 / span 2;
+}
+
+.UserMenu {
+    height: 5vh;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0 1vw 0 ;
+    padding: 0;
+    grid-column: 8 / span 2;
+}
+
+.UserMenu li {
+    display: inherit;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0.2vw;
+    margin-right: 0.2vw;
+    border: 2px solid #fff;
+    border-radius: 100%;
+    width: 2.1vw;
+    height: 2.1vw;
+}
+
+.UserMenu img {
+    align-self: center;
+    height: 1.15vw;
+    width: auto;
+    margin: auto;
+}
+
+.UserMenu li:nth-child(1) {
+    background-color: #000;
+}
+
+.UserMenu li:nth-child(2) {
+    background-color: #FDB913;
+}
+
+.UserMenu li:nth-child(3) {
+    background-color: #0079C1;
+}
+
+.LogoCont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 7vh;
+    overflow: hidden;
+    grid-column: 2 / span 2;
+    
+}
+
+.LogoCont img {
+    height: 5.5vh;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.LogoCont img:nth-child(1) {
+    margin-right: auto;
+}
+
+.LogoCont img:nth-child(2) {
+    margin-left: auto;
+}
+
+.HeadMenu {
+    height: 3vh;
+    display: flex;
+    list-style: none;
+    justify-content: flex-start;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    grid-column: 1 / span 10;
+    background-color: #0079C1;
+    border-top: 2px solid #fff;
+    padding-left: 5.5vw;
+}
+
+.HeadMenu li {
+    display: inherit;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2vw auto;
+    /* margin-left: 0.3vw;
+    margin-right: 0.3vw; */
+}
+
+/* .HeadMenu li::before {
+    color: #fff;
+    font-size: 18px;
+    content: "|";
+}
+
+.HeadMenu li::after {
+    color: #fff;
+    font-size: 18px;
+    content: "|";
+} */
+
+.HeadMenu li:hover {
+    background-color: #FDB913;
+}
+
+.HeadMenu a {
+    text-decoration: none;
+    color: #fff;
+    padding-left: 0.2vw;
+    padding-right: 0.2vw;
+    font-weight: bold;
+}
+
+.FootCont {
+    display: grid;
+    grid-template-columns: 10vw 20vw 20vw 20vw 20vw 10vw ;
+    grid-template-rows: auto auto auto;
+}
+
+.FootBarTxt {
+    height: 3vh;
+    place-self: center;
+    text-align: center;
+    grid-column: 1 / span 6;
+    background-color: #0079C1;
+    border-top: 2px solid #fff;
+    color: #fff;
+}
